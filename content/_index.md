@@ -1,5 +1,5 @@
 ---
 title: Dhruva Gole
-description: Electrical Engineer
+description: Electrical Engineer, Embedded Developer
+background: "images/bg.jpg"
 ---
-
