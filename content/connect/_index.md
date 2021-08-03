@@ -1,10 +1,5 @@
 ---
 title: Connect
-background: "images/bg.jpg"
+background: images/coffee.png
 ---
 
-[Github](https://github.com/dhruvag2000)
-
-[LinkedIn](https://www.linkedin.com/in/dhruva-gole/)
-
-[Twitter](https://twitter.com/DhruvaGole)
