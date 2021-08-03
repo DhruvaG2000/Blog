@@ -4,6 +4,17 @@ description: "Internship Certificates"
 icon: "flag"
 ---
 
+### Skillset Summary
+- C++
+- C
+- Using Embedded Linux
+- Device Tree
+- ESP-IDF
+- MATLAB + Simulink
+- Python
+- Git
+- KiCAD
+
 ### Augmented Labs
 
 {{< image "/images/bela-certi.png" fit >}}
