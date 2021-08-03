@@ -1,8 +1,6 @@
 ---
 title: Blogs
-background: "images/bg.jpg"
+background: images/codebinary.jpg
+logo: "https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-icon-192.png"
 ---
 
-[GSoC2021: Bela support for BeagleBone AI](https://dhruvag2000.github.io/Blog-GSoC21/)
-
-[GNU Debugger for Noobs](https://dhruvag2000.github.io/gdb-for-noobs/)
