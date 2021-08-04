@@ -27,6 +27,9 @@
 <nav>
 <ul>
 <li>
+<a href=#esp32-voltmeter>ESP32 Voltmeter</a>
+</li>
+<li>
 <a href=#gdb>GDB</a>
 </li>
 <li>
@@ -36,6 +39,69 @@
 </nav>
 </header>
 <div id=main>
+<article id=esp32-voltmeter>
+<h2 class=major>ESP32 Voltmeter</h2>
+<span class="image main"><img src alt></span>
+<p>Repository: <a href=https://github.com/DhruvaG2000/ESP32-ADS1115>ESP32-ADS1115</a></p>
+<h2 id=esp32-ads1115>ESP32-ADS1115</h2>
+<p>This repo in detail shows how to make a voltmeter using <a href=https://github.com/UncleRus/esp-idf-lib>unclerus ADS111X library</a> in <strong>ESP IDF</strong></p>
+<h3 id=steps>Steps:</h3>
+<ol>
+<li>clone the library to your <code>~/esp/</code>.</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>cd ~/esp/
+git clone https://github.com/UncleRus/esp-idf-lib.git
+</code></pre></div><ol start=2>
+<li>Clone this repo.</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>git clone https://github.com/DhruvaG2000/ESP32-ADS1115
+</code></pre></div><ol start=3>
+<li>Make connections as shown:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>S. No.</th>
+<th>ADS 1115</th>
+<th>ESP 32</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>V_DD</td>
+<td>V_in or 5V source</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>GND</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>SCL</td>
+<td>D22</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>SDA</td>
+<td>D21</td>
+</tr>
+</tbody>
+</table>
+<p>And, Your analog input in A0</p>
+<p>No other pins need any connections in my experience until now.</p>
+<p>Feel free to tag me in forums or email me if you face any issues.</p>
+<h3 id=helpful-pin-diagrams>Helpful Pin Diagrams</h3>
+<span class="image fit">
+<img src=https://circuits4you.com/wp-content/uploads/2018/12/ESP32-Pinout.jpg alt="ESP32 Pin Diagram">
+</span>
+<p><strong>ADS1115 Pin Diagram:</strong>
+<span class="image fit">
+<img src=https://cdn-shop.adafruit.com/1200x900/1085-02.jpg alt="ADS1115 Pin Diagram">
+</span>
+</p>
+</article>
 <article id=gdb>
 <h2 class=major>GDB</h2>
 <span class="image main"><img src alt></span>
