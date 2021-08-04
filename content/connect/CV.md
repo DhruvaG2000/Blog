@@ -3,4 +3,4 @@ title: Resume
 ---
 
 
-{{< image "/images/Dhruva-CV" fit >}}
+{{< image "/images/Dhruva-CV.png" fit >}}
