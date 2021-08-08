@@ -30,7 +30,7 @@ resize:vertical;
 [type="submit"] {
 font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 width: 100%;
-background:#CC6666;
+background:#63625d;
 border-radius:5px;
 border:0;
 cursor:pointer;
@@ -42,6 +42,6 @@ transition: all 0.3s;
 margin-top:-4px;
 font-weight:700;
 }
-[type="submit"]:hover { background:#CC4949; }
+[type="submit"]:hover { background:#877b7b; }
 
 
