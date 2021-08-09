@@ -8,7 +8,7 @@ title: Contact
 
 <script type="text/javascript">var submitted=false;</script>
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-onload="if(submitted) {window.location='#social-media';}"></iframe>
+onload="if(submitted) {window.location='more/#social-media#social-media';}"></iframe>
 
 <form action="https://docs.google.com/forms/d/e/1FAIpQLSdTFZ8lV4IH6ossSXuJLqyR7tpT_uU5cONPZyoBrJKP92halQ/formResponse"
 method="post" target="hidden_iframe" onsubmit="submitted=true;">

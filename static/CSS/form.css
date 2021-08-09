@@ -10,7 +10,7 @@ font-size: 18px;
 border-radius: 5px;
 line-height: 22px;
 background-color: transparent;
-border:2px solid #CC6666;
+border:2px solid #63625d;
 transition: all 0.3s;
 padding: 13px;
 margin-bottom: 15px;
@@ -19,7 +19,7 @@ box-sizing: border-box;
 outline:0;
 }
 
-.form-input:focus { border:2px solid #CC4949; }
+.form-input:focus { border:2px solid #CC6666; }
 
 textarea {
 height: 150px;
