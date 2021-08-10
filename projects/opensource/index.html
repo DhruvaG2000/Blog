@@ -64,7 +64,62 @@ A summary of all my Open Source Contributions
 </p>
 <p><a href=https://dhruvag2000.github.io/Blog-GSoC21/>GSoC2021: Bela support for BeagleBone AI</a></p>
 <p>Bela is a hardware and software system for creating beautiful interaction with sensors and sound. This project proposes to provide restructuring and improvement of existing Bela Software Code to allow for compatibility and easier transition to newer TI chips (like in the BBAI).</p>
-<p>The <em>achieved milestons</em> this project can be found on my <a href>official gsoc project report</a></p>
+<h2 id=about>About</h2>
+<ul>
+<li><em>Student Name:</em> Dhruva Gole</li>
+<li><em>Mentors:</em> ﻿<a href=https://github.com/giuliomoro>Giulio Moro</a>, Stephen Arnold and Robert Manzke</li>
+<li><em>GSoC Entry link:</em> <a href=https://summerofcode.withgoogle.com/projects/#5697403266531328>GSoC entry #5697403266531328</a></li>
+<li><em>Wiki:</em> <a href=https://forum.beagleboard.org/t/bela-support-for-bbai-later-ti-chips/29257/7>BB.org forum bela-support-for-bbai</a></li>
+<li><em>Blog Link:</em> <a href=https://dhruvag2000.github.io/Blog-GSoC21/>Bela Support for BBAI</a>
+This project has been done as part of Google Summer of Code 2021 with the BeagleBoard.org Foundation. </li>
+<li><em>Youtube</em>: An Introductory video(<a href="https://www.youtube.com/watch?v=aVLRUyPBBJk">click here to view</a>) has been made to explain the project outline.</li>
+</ul>
+<h2 id=achieved-milestones>Achieved Milestones</h2>
+<ol>
+<li>
+<p>Created a device tree overlay using <a href=https://elinux.org/Beagleboard:BeagleBone_cape_interface_spec>Cape Compatibility layer</a> to port <a href=https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-BONE-AUDI-02-00A0.dts>BB-BONE-AUDI</a> overlay to the BBAI.
+The Overlay I wrote has been accepted by BeagleBone maintainer Robert Nelson, and you can find it to <a href=https://github.com/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBAI-AUDI-02-00A0.dts>here</a></p>
+</li>
+<li>
+<p>Created a <a href=https://github.com/DhruvaG2000/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBAI-BELA-00A1.dts>BBAI-BELA-00A1 device tree overlay</a> which helps in setting the right pinmux for BELA.</p>
+</li>
+<li>
+<p>Adapted to the Bela PRU and ARM code and workflow to use the PRU using the <a href=https://www.kernel.org/doc/Documentation/remoteproc.txt>Remote Processor Framework</a> instead of the <em>almost</em> outdated UIO PRUSS.</p>
+</li>
+<li>
+<p>Updated the Bela code to use the McASP, GPIO and McSPI on the AM5729 SoC of the BBAI</p>
+</li>
+<li>
+<p>Installed a Xenomai patched kernel and ran the full Bela stack.</p>
+</li>
+<li>
+<p>I also ported a debugger for PRU called <a href=https://github.com/giuliomoro/prudebug/tree/master>PRUDebug</a> to work on both the PRUSS on board the AM5792.</p>
+</li>
+</ol>
+<h2 id=pull-requests>Pull Requests</h2>
+<ol>
+<li>
+<p><a href=https://github.com/beagleboard/BeagleBoard-DeviceTrees/pull/33>beagleboard/BeagleBoard-DeviceTrees BBAI-AUDI-02-00A0 overlay using the CCL #33</a></p>
+</li>
+<li>
+<p><a href=https://github.com/beagleboard/BeagleBoard-DeviceTrees/pull/36>BBAI-AUDI-02-00A0.dts: Solved the output audio frequency issue #36 </a></p>
+</li>
+<li>
+<p><a href=https://github.com/beagleboard/cloud9-examples/pull/57>cloud9-examples Corrected: solved a compilation issue #57 </a></p>
+</li>
+<li>
+<p><a href=https://github.com/giuliomoro/Bela-dhruva/pull/1>Bela: PruManager Rproc + MMap/ prussdrv+UIO implementation</a></p>
+</li>
+<li>
+<p><a href=https://github.com/giuliomoro/prudebug/pull/2>giuliomoro/prudebug: Add support for AM57x #2</a></p>
+</li>
+<li>
+<p><a href=https://github.com/MarkAYoder/BeagleBoard-exercises/pull/7>MarkAYoder/BeagleBoard-exercises: prudebug: Add BBAI support #7</a></p>
+</li>
+<li>
+<p><a href=https://github.com/BelaPlatform/Bela/pull/668>Bela: Add support for BeagleBone AI #668</a></p>
+</li>
+</ol>
 </article>
 </div>
 <footer id=footer>
