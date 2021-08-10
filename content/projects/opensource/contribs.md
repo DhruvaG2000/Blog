@@ -1,7 +1,5 @@
 ---
 title: "Contributions"
-description: ""
-icon: "flag"
 ---
 
 I have contributed to open source in the following places:
