@@ -31,6 +31,7 @@ int main()
   std::cout << "Matrix a = \n" << a << std::endl;
   std::cout << "Addition of two matrices: a + (inverse a)\n" << a+m << std::endl;
   std::cout << "And product is:\n" << a*m << std::endl;
+  std::cout << "The Determinant of a is:\n" << a.determinant() << std::endl;
   return 0;
 }
 

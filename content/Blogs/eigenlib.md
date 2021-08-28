@@ -22,13 +22,13 @@ To get the full source code, visit [1.cpp](https://github.com/DhruvaG2000/Blog/e
 ### Matrix Declaration
 
 You can use
-```
+```c++
 Eigen::MatrixXd m(3,3);
 ```
 for Matrix declaration of specifyied size, in this case 3 by 3.
 
 and for smaller matrices upto the size of 4 by 4, you can simple use
-```
+```c++
 Eigen::Matrix3d a;
 ```
 where instead of 3 you can use 1,2 or 4 as well depending on the requirement.
@@ -45,9 +45,16 @@ Addition of two matrices: a + (inverse a)
 ```
 
 - For finding the inverse of a matrix, simply use
+```c++
+a.inverse();
 ```
-m << a.inverse();
+
+- For Determinant:
+```c++
+a.determinant();
 ```
+
+- For storing the output of an operation into another matrix, use `<<` in the manner `matrixInv << a.inverse()`
 
 ## References
 
