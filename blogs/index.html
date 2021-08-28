@@ -222,11 +222,11 @@ The factorial of 4 is 24[Inferior 1 (process 15039) exited normally]
 <p>To get the full source code, visit <a href=https://github.com/DhruvaG2000/Blog/extras/1.cpp>1.cpp</a>.</p>
 <h3 id=matrix-declaration>Matrix Declaration</h3>
 <p>You can use</p>
-<pre><code>Eigen::MatrixXd m(3,3);
-</code></pre><p>for Matrix declaration of specifyied size, in this case 3 by 3.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++>Eigen<span style=color:#f92672>::</span>MatrixXd m(<span style=color:#ae81ff>3</span>,<span style=color:#ae81ff>3</span>);
+</code></pre></div><p>for Matrix declaration of specifyied size, in this case 3 by 3.</p>
 <p>and for smaller matrices upto the size of 4 by 4, you can simple use</p>
-<pre><code>Eigen::Matrix3d a;
-</code></pre><p>where instead of 3 you can use 1,2 or 4 as well depending on the requirement.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++>Eigen<span style=color:#f92672>::</span>Matrix3d a;
+</code></pre></div><p>where instead of 3 you can use 1,2 or 4 as well depending on the requirement.</p>
 <h3 id=basic-operations>Basic Operations</h3>
 <ul>
 <li>For Martix Addition, Subtraction you can just use <code>+</code> or <code>-</code> as you would with any other data type like <code>float</code> or <code>int</code>.
@@ -239,8 +239,15 @@ In our case, the program output looks like:</li>
 </code></pre><ul>
 <li>For finding the inverse of a matrix, simply use</li>
 </ul>
-<pre><code>m &lt;&lt; a.inverse();
-</code></pre><h2 id=references>References</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++>a.inverse();
+</code></pre></div><ul>
+<li>For Determinant:</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++>a.determinant();
+</code></pre></div><ul>
+<li>For storing the output of an operation into another matrix, use <code>&lt;&lt;</code> in the manner <code>matrixInv &lt;&lt; a.inverse()</code></li>
+</ul>
+<h2 id=references>References</h2>
 <ul>
 <li><a href=https://eigen.tuxfamily.org/dox/GettingStarted.html>Official Eigen Website Docs</a></li>
 </ul>
