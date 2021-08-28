@@ -32,6 +32,9 @@
 <li>
 <a href=#gdb>GDB</a>
 </li>
+<li>
+<a href=#the-eigen-library>The Eigen Library</a>
+</li>
 </ul>
 </nav>
 </header>
@@ -204,6 +207,42 @@ The factorial of 4 is 24[Inferior 1 (process 15039) exited normally]
 <ul>
 <li><a href=https://www.cs.umd.edu/~srhuang/teaching/cmsc212/gdb-tutorial-handout.pdf>gdb-tutorial-handout</a></li>
 <li><a href=http://www.math.bas.bg/~nkirov/2005/netb151/debugging-with-gdb.html>debugging-with-gdb</a></li>
+</ul>
+</article>
+<article id=the-eigen-library>
+<h2 class=major>The Eigen Library</h2>
+<span class="image main"><img src alt></span>
+<h2 id=introduction>Introduction</h2>
+<p>Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.</p>
+<h2 id=installation>Installation</h2>
+<p>My system is <code>Linux pop-os</code> so all I did was</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>git clone https://gitlab.com/libeigen/eigen.git
+</code></pre></div><p>and then copied the <a href=https://gitlab.com/libeigen/eigen/-/tree/master/Eigen>Eigen folder</a> to <code>/usr/local/include</code> so I could include the headers without having to explicitly pass a <code>-I</code> option to <code>g++</code>.</p>
+<h2 id=basic-matrix-operations>Basic Matrix operations</h2>
+<p>To get the full source code, visit <a href=https://github.com/DhruvaG2000/Blog/extras/1.cpp>1.cpp</a>.</p>
+<h3 id=matrix-declaration>Matrix Declaration</h3>
+<p>You can use</p>
+<pre><code>Eigen::MatrixXd m(3,3);
+</code></pre><p>for Matrix declaration of specifyied size, in this case 3 by 3.</p>
+<p>and for smaller matrices upto the size of 4 by 4, you can simple use</p>
+<pre><code>Eigen::Matrix3d a;
+</code></pre><p>where instead of 3 you can use 1,2 or 4 as well depending on the requirement.</p>
+<h3 id=basic-operations>Basic Operations</h3>
+<ul>
+<li>For Martix Addition, Subtraction you can just use <code>+</code> or <code>-</code> as you would with any other data type like <code>float</code> or <code>int</code>.
+In our case, the program output looks like:</li>
+</ul>
+<pre><code>Addition of two matrices: a + (inverse a)
+ 24.0595 -3.97619 -3.91667
+-3.97619  24.0595 -3.91667
+-3.91667 -3.91667  4.41667
+</code></pre><ul>
+<li>For finding the inverse of a matrix, simply use</li>
+</ul>
+<pre><code>m &lt;&lt; a.inverse();
+</code></pre><h2 id=references>References</h2>
+<ul>
+<li><a href=https://eigen.tuxfamily.org/dox/GettingStarted.html>Official Eigen Website Docs</a></li>
 </ul>
 </article>
 </div>
