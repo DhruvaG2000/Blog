@@ -139,9 +139,9 @@ trivial one&rsquo;s below&mldr;</li>
 <li>
 <p>First, let&rsquo;s just run the code..
 command:</p>
-<pre><code>run
+<pre tabindex=0><code>run
 </code></pre><p>output:</p>
-<pre><code>Starting program: /home/dhruva/Documents/studies/maths/gdb-for-noobs/a.out
+<pre tabindex=0><code>Starting program: /home/dhruva/Documents/studies/maths/gdb-for-noobs/a.out
 enter any number:
 4
 The factorial of 4 is 1[Inferior 1 (process 14193) exited normally]
@@ -153,12 +153,12 @@ Now, let&rsquo;s see how gdb simplifies things for us&mldr;</p>
 <p>creating breakpoints:
 Since my factorial function is most probably messing up, I will add the breakpoint to it.
 command:</p>
-<pre><code>break factorial
+<pre tabindex=0><code>break factorial
 </code></pre><p>output:</p>
-<pre><code>Breakpoint 1 at 0x555555554993: file buggy_factorial.cpp, line 5.
+<pre tabindex=0><code>Breakpoint 1 at 0x555555554993: file buggy_factorial.cpp, line 5.
 </code></pre><p>now lets run it again&mldr; using <code>run</code>
 output:</p>
-<pre><code>Starting program: /home/dhruva/Documents/studies/maths/gdb-for-noobs/a.out
+<pre tabindex=0><code>Starting program: /home/dhruva/Documents/studies/maths/gdb-for-noobs/a.out
 enter any number:
 4
 
@@ -192,7 +192,7 @@ Press <code>q</code> and then <code>y</code> to exit the gdb, and again compile 
 </li>
 <li>
 <p>output:</p>
-<pre><code>Starting program: /home/dhruva/Documents/studies/maths/gdb-for-noobs/fact
+<pre tabindex=0><code>Starting program: /home/dhruva/Documents/studies/maths/gdb-for-noobs/fact
 enter any number:
 4
 The factorial of 4 is 24[Inferior 1 (process 15039) exited normally]
@@ -232,7 +232,7 @@ The factorial of 4 is 24[Inferior 1 (process 15039) exited normally]
 <li>For Martix Addition, Subtraction you can just use <code>+</code> or <code>-</code> as you would with any other data type like <code>float</code> or <code>int</code>.
 In our case, the program output looks like:</li>
 </ul>
-<pre><code>Addition of two matrices: a + (inverse a)
+<pre tabindex=0><code>Addition of two matrices: a + (inverse a)
  24.0595 -3.97619 -3.91667
 -3.97619  24.0595 -3.91667
 -3.91667 -3.91667  4.41667
