@@ -15,7 +15,8 @@ icon: "flag"
 - Git
 - KiCAD
 
-### Augmented Labs
+### Google Summer of Code
+{{< image "/images/Screenshot_20210904-083557_AdobeAcrobat.png" fit >}} 
 
 {{< image "/images/bela-certi.png" fit >}}
 
