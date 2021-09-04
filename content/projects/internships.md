@@ -16,7 +16,7 @@ icon: "flag"
 - KiCAD
 
 ### Google Summer of Code
-{{< image "/images/Screenshot_20210904-083557_AdobeAcrobat.png" fit >}} 
+{{< image "/images/Screenshot_20210904-083557_Adobe Acrobat.png" fit >}} 
 
 {{< image "/images/bela-certi.png" fit >}}
 
