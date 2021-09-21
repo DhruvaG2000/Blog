@@ -1,0 +1,116 @@
+<!doctype html><html>
+<head>
+<title>Blogs</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+<link rel=stylesheet href=https://dhruvagole.tech/assets/css/main.css>
+<link rel=canonical href=https://dhruvagole.tech/blogs/more/>
+<noscript><link rel=stylesheet href=https://dhruvagole.tech/assets/css/noscript.css></noscript>
+<style>:root{--site-background:url("https://dhruvagole.tech/images/codebinary.jpg")}</style>
+<script src=https://identity.netlify.com/v1/netlify-identity-widget.js></script>
+</head>
+<body class=is-preload>
+<div id=wrapper>
+<header id=header>
+<div class=logo>
+<a href=/>
+<span class=icon>
+<img src=../images/dot.png>
+</span>
+</a>
+</div>
+<div class=content>
+<div class=inner>
+<h1>Blogs</h1>
+</div>
+</div>
+<nav>
+<ul>
+<li>
+<a href=#oled-temperature>OLED Temperature</a>
+</li>
+</ul>
+</nav>
+</header>
+<div id=main>
+<article id=oled-temperature>
+<h2 class=major>OLED Temperature</h2>
+<span class="image main"><img src alt></span>
+<h2 id=intro>Intro</h2>
+<h2 id=schematics>Schematics</h2>
+<h2 id=source-code>Source code</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=color:#75715e>/********************************************************************/</span>
+<span style=color:#75715e>// First we include the libraries
+</span><span style=color:#75715e></span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;OneWire.h&gt;</span><span style=color:#75715e>
+</span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;DallasTemperature.h&gt;</span><span style=color:#75715e>
+</span><span style=color:#75715e></span><span style=color:#75715e>/********************************************************************/</span>
+<span style=color:#75715e>// Data wire is plugged into pin 2 on the Arduino
+</span><span style=color:#75715e></span><span style=color:#75715e>#define ONE_WIRE_BUS 2
+</span><span style=color:#75715e></span><span style=color:#75715e>/********************************************************************/</span>
+<span style=color:#75715e>// Setup a oneWire instance to communicate with any OneWire devices
+</span><span style=color:#75715e>// (not just Maxim/Dallas temperature ICs)
+</span><span style=color:#75715e></span>OneWire <span style=color:#a6e22e>oneWire</span>(ONE_WIRE_BUS);
+<span style=color:#75715e>/********************************************************************/</span>
+<span style=color:#75715e>// Pass our oneWire reference to Dallas Temperature.
+</span><span style=color:#75715e></span>DallasTemperature <span style=color:#a6e22e>sensors</span>(<span style=color:#f92672>&amp;</span>oneWire);
+<span style=color:#75715e>/********************************************************************/</span>
+
+
+<span style=color:#75715e>/* OLED Part */</span>
+<span style=color:#75715e>#include</span> <span style=color:#75715e>&#34;U8glib.h&#34;</span><span style=color:#75715e>
+</span><span style=color:#75715e></span>U8GLIB_SH1106_128X64 <span style=color:#a6e22e>u8g</span>(U8G_I2C_OPT_NONE);
+
+<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>draw</span>(<span style=color:#66d9ef>void</span>) {
+   <span style=color:#75715e>// call sensors.requestTemperatures() to issue a global temperature
+</span><span style=color:#75715e></span> <span style=color:#75715e>// request to all devices on the bus
+</span><span style=color:#75715e></span><span style=color:#75715e>/********************************************************************/</span>
+ Serial.print(<span style=color:#e6db74>&#34; Requesting temperatures...&#34;</span>);
+ sensors.requestTemperatures(); <span style=color:#75715e>// Send the command to get temperature readings
+</span><span style=color:#75715e></span> Serial.println(<span style=color:#e6db74>&#34;DONE&#34;</span>);
+<span style=color:#75715e>/********************************************************************/</span>
+ Serial.print(<span style=color:#e6db74>&#34;Temperature is: &#34;</span>);
+ Serial.print(sensors.getTempCByIndex(<span style=color:#ae81ff>0</span>)); <span style=color:#75715e>// Why &#34;byIndex&#34;?
+</span><span style=color:#75715e></span>   <span style=color:#75715e>// You can have more than one DS18B20 on the same bus.
+</span><span style=color:#75715e></span>   <span style=color:#75715e>// 0 refers to the first IC on the wire
+</span><span style=color:#75715e></span>  u8g.setFont(u8g_font_profont12);
+  <span style=color:#66d9ef>char</span> to_print[] <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Temperature is: &#34;</span>;
+  u8g.setPrintPos(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>10</span>);
+  u8g.print(to_print);
+  u8g.setPrintPos(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>25</span>);
+ <span style=color:#66d9ef>float</span> val <span style=color:#f92672>=</span> sensors.getTempCByIndex(<span style=color:#ae81ff>0</span>);
+  u8g.print(val);
+}
+
+
+<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setup</span>(<span style=color:#66d9ef>void</span>)
+{
+ <span style=color:#75715e>// start serial port
+</span><span style=color:#75715e></span> Serial.begin(<span style=color:#ae81ff>9600</span>);
+ Serial.println(<span style=color:#e6db74>&#34;Dallas Temperature IC Control Library Demo&#34;</span>);
+ <span style=color:#75715e>// Start up the library
+</span><span style=color:#75715e></span> sensors.begin();
+}
+<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>loop</span>(<span style=color:#66d9ef>void</span>)
+{
+
+    u8g.firstPage();
+  <span style=color:#66d9ef>do</span> {
+    draw();
+  } <span style=color:#66d9ef>while</span> (u8g.nextPage() );
+  delay(<span style=color:#ae81ff>1000</span>);
+}
+</code></pre></div><h2 id=references>References</h2>
+</article>
+</div>
+<footer id=footer>
+<p class=copyright>&copy; <a href=https://github.com/dhruvag2000>2021 Dhruva Gole</p>
+</footer>
+</div>
+<div id=bg></div>
+</body>
+<script src=https://dhruvagole.tech/assets/js/jquery.min.js></script>
+<script src=https://dhruvagole.tech/assets/js/browser.min.js></script>
+<script src=https://dhruvagole.tech/assets/js/breakpoints.min.js></script>
+<script src=https://dhruvagole.tech/assets/js/util.js></script>
+<script src=https://dhruvagole.tech/assets/js/main.js></script>
+</html>
