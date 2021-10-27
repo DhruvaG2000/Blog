@@ -4,9 +4,10 @@ title: "Contributions"
 
 I have contributed to open source in the following places:
 
-## Call for Code
+## IBM- Call for Code
 - Achieve millisecond level time sync with NTP on the ESP32. [PR#40: Adopt the ESPNtpClient library](https://github.com/openeew/openeew-firmware/pull/40)
 - setup pio build workflow for WatsonIOT in [PR#39](https://github.com/openeew/openeew-firmware/pull/39).
+- identify reason behind failure and fix travis build issue. [PR#248](https://github.com/Call-for-Code/ClusterDuck-Protocol/pull/248)
 
 ## GSoC 2021
 - Tried to add librobotcontrol support to the BeagleBone AI in [PR#204](https://github.com/beagleboard/librobotcontrol/pull/204).
@@ -19,5 +20,6 @@ I have contributed to open source in the following places:
 - Created PruManager.cpp and PruManager.h to help port the Bela Code to AM572x and also provide backward compatibility under a single roof. [click here](https://github.com/giuliomoro/Bela-dhruva/pull/1)
 
 ## Other
+- Update **Zephyr RTOS** Documentation: [boards: Arduino Nano BLE 33: update documentation PR#38542](https://github.com/zephyrproject-rtos/zephyr/pull/38542)
 - Writing a blog for SRA VJTI: [gdb-for-noobs PR#1](https://github.com/SRA-VJTI/blog/pull/1).
 - Added instructions for using an ADC library for UncleRus/esp-idf-lib in [PR#163](https://github.com/UncleRus/esp-idf-lib/pull/163).
