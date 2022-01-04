@@ -20,6 +20,9 @@ I have contributed to open source in the following places:
 - Created PruManager.cpp and PruManager.h to help port the Bela Code to AM572x and also provide backward compatibility under a single roof. [click here](https://github.com/giuliomoro/Bela-dhruva/pull/1)
 
 ## Other
+- **Yocto Project**:  scripts/checklayer/common.py:
+    - [Test case to review if the README file specifies the maintainer, specifies the word patch, and contains an email address](https://lists.openembedded.org/g/openembedded-core/message/158966?p=%2C%2C%2C20%2C0%2C0%2C0%3A%3Arecentpostdate%2Fsticky%2C%2CBug%2311131%2C20%2C2%2C0%2C87397246)
+    - Fixed a minor grammatical error
 - Update **Zephyr RTOS** Documentation: [boards: Arduino Nano BLE 33: update documentation PR#38542](https://github.com/zephyrproject-rtos/zephyr/pull/38542)
 - Writing a blog for SRA VJTI: [gdb-for-noobs PR#1](https://github.com/SRA-VJTI/blog/pull/1).
 - Added instructions for using an ADC library for UncleRus/esp-idf-lib in [PR#163](https://github.com/UncleRus/esp-idf-lib/pull/163).
