@@ -20,6 +20,7 @@ I have contributed to open source in the following places:
 - Created PruManager.cpp and PruManager.h to help port the Bela Code to AM572x and also provide backward compatibility under a single roof. [click here](https://github.com/giuliomoro/Bela-dhruva/pull/1)
 
 ## Other
+- **Rizin**: [Add power/exponent to math operations #2220](https://github.com/rizinorg/rizin/pull/2220)
 - **Yocto Project**:  scripts/checklayer/common.py:
     - [Test case to review if the README file specifies the maintainer, specifies the word patch, and contains an email address](https://lists.openembedded.org/g/openembedded-core/message/158966?p=%2C%2C%2C20%2C0%2C0%2C0%3A%3Arecentpostdate%2Fsticky%2C%2CBug%2311131%2C20%2C2%2C0%2C87397246)
     - Fixed a minor grammatical error
